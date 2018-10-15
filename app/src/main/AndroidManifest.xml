@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Connexion"></activity>
+        <activity android:name=".Register" />
     </application>
 
 </manifest>

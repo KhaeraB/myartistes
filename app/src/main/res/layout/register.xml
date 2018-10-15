@@ -23,15 +23,47 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#fff"
-            android:padding="10sp"
-            android:text="User"/>
+            android:padding="5sp"
+            android:text="Firstname" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="5sp"
+            android:text="lastName"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="5sp"
+            android:text="Email"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp">
 
@@ -40,9 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
-            android:padding="10sp"
+            android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:text="Password"/>
+            android:padding="5sp"
+            android:text="Password" />
 
     </LinearLayout>
 
@@ -57,11 +90,10 @@
         <Button
             android:id="@+id/okbutton"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
+            android:layout_height="38dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/colorOk"
-            android:layout_marginBottom="10dp"
-            />
+            android:text="Create" />
 
         <Button
             android:id="@+id/cancelbutton"
@@ -69,15 +101,9 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:background="@color/colorCancel"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             />
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Sin up"
-            android:background="@color/colorSinUp"
-            />
+
 
     </LinearLayout>
 
