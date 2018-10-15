@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
+    <style name="buttonValide" parent="AppTheme" >
+        <item name="android:background">@color/colorOk</item>
+    </style>
+    <style name="buttonInvalide" parent="AppTheme" >
+        <item name="android:background">@color/colorCancel</item>
+    </style>
+    <style name="buttonRegister" parent="AppTheme" >
+        <item name="android:background">@color/colorSinUp</item>
+    </style>
 </resources>
