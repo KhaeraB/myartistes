@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyArtistes</string>
+    <string name="username_or_email">UserName or email</string>
 </resources>
