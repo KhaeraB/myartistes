@@ -20,11 +20,13 @@
         android:layout_marginRight="5dp">
 
         <EditText
+            android:id="@+id/firstName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#fff"
             android:padding="5sp"
-            android:text="Firstname" />
+            android:hint="Firstname"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -36,12 +38,12 @@
         android:layout_marginRight="5dp">
 
         <EditText
+            android:id="@+id/lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
             android:padding="5sp"
-            android:text="lastName"/>
-
+            android:hint="lastName"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,11 +54,12 @@
         android:layout_marginRight="5dp">
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
             android:padding="5sp"
-            android:text="Email"/>
+            android:hint="Email"/>
 
     </LinearLayout>
     <LinearLayout
@@ -75,7 +78,7 @@
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:padding="5sp"
-            android:text="Password" />
+            />
 
     </LinearLayout>
 
@@ -88,7 +91,7 @@
         android:layout_marginRight="5dp">
 
         <Button
-            android:id="@+id/okbutton"
+            android:id="@+id/createbutton"
             android:layout_width="fill_parent"
             android:layout_height="38dp"
             android:layout_marginBottom="5dp"

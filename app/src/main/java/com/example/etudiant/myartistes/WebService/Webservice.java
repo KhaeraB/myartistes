@@ -1,7 +1,9 @@
-package com.example.etudiant.myartistes;
+package com.example.etudiant.myartistes.WebService;
 
 import android.app.DownloadManager;
+import android.widget.EditText;
 
+import com.example.etudiant.myartistes.interfaces.WsListener;
 import com.github.kittinunf.fuel.Fuel;
 import com.github.kittinunf.fuel.core.FuelError;
 import com.github.kittinunf.fuel.core.Handler;
@@ -16,25 +18,17 @@ import java.util.Map;
 
 public class Webservice {
 
-    interface WsListener{
-        void errorRequest(int idRequest);
-        void successRequest(int idRequest, String data);
-    }
 
     public void sendRequest(final int idRequest, String target, Map<String, String> params, final WsListener wsListener){
 
 
         if(params == null){
-
             params = new HashMap<>();
-
         }
 
 
 
         String jsonString = new Gson().toJson(params);
-
-
 
         Map<String, String> header = new HashMap<>();
 
@@ -44,44 +38,25 @@ public class Webservice {
 
         Fuel.post("http://51.15.254.4:9001/"+target).body(jsonString, Charset.forName("UTF-8")).header(header).responseString(new Handler<String>() {
 
+
             @Override
-
-            public void failure(DownloadManager.Request request, Response response, FuelError error) {
-
-
-
+            public void failure(Request request, Response response, FuelError error) {
                 if(wsListener == null){
                     return;
                 }
-
                 wsListener.errorRequest(idRequest);
-
             }
-
-
 
             @Override
-
             public void success(Request request, Response response, String data) {
-
                 //do something when it is successful
-
                 if(wsListener == null){
-
                     return;
-
                 }
-
-
-
                 wsListener.successRequest(idRequest, data);
-
             }
-
         });
-
-
-
     }
+
 
 }

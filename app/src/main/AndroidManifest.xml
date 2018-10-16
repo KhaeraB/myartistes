@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Connexion"></activity>
-        <activity android:name=".Register" />
+        <activity android:name=".LoginActivity"
+            android:label="Connexion">
+
+        </activity>
+        <activity android:name=".SinUpActivity"
+            android:label="Create Account"/>
+        <activity android:name=".RecipeActivity"
+            android:label="All recipe"/>
     </application>
 
 </manifest>
