@@ -9,11 +9,10 @@ public class Recipe {
         private String image;
         private String itemTitle;
 
-        public Recipe(int id, String itemImage, String itemTitle){
+        public Recipe(int id, String itemTitle, String itemImage){
             this.id = id;
-            this.image = itemImage;
             this.itemTitle = itemTitle;
-
+            this.image = itemImage;
         }
 
         public int getId() {

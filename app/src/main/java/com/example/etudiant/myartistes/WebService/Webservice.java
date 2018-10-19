@@ -1,8 +1,11 @@
 package com.example.etudiant.myartistes.WebService;
 
 import android.app.DownloadManager;
+import android.util.Log;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.etudiant.myartistes.LoginActivity;
 import com.example.etudiant.myartistes.interfaces.WsListener;
 import com.github.kittinunf.fuel.Fuel;
 import com.github.kittinunf.fuel.core.FuelError;
@@ -44,6 +47,7 @@ public class Webservice {
                 if(wsListener == null){
                     return;
                 }
+                Log.e("RECIPE LIST", "No data error" + error);
                 wsListener.errorRequest(idRequest);
             }
 
@@ -53,6 +57,8 @@ public class Webservice {
                 if(wsListener == null){
                     return;
                 }
+
+                Log.d("RECIPES LIST", "success: RECIPE "+response+ " "+data);
                 wsListener.successRequest(idRequest, data);
             }
         });

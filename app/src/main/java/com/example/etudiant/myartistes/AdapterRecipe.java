@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,15 @@ public class AdapterRecipe extends ArrayAdapter<Recipe>{
             }
         }
         @Nullable
+        public String getImage(int position) {
+            if(allRecipe.isEmpty()){
+                return super.getItem(position).getImage();
+            }else{
+                return allRecipe.get(position).getImage();
+            }
+        }
+
+        @Nullable
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
@@ -47,7 +58,8 @@ public class AdapterRecipe extends ArrayAdapter<Recipe>{
                 convertView.setTag(viewHolder);
             }
             viewHolder.itemTitle.setText(getItem(position ).getItemTitle());
-// ici utilisation de picasso pour remplir view
+            Picasso.get().load(getImage(position)).into(viewHolder.image);
+
             //nous renvoyons notre vue à l'adapter, afin qu'il l'affiche
             //et qu'il puisse la mettre à recycler lorsqu'elle sera sortie de l'écran
             return convertView;

@@ -24,6 +24,7 @@ public class RecipeActivity extends AppCompatActivity implements WsListener, Ext
         ExtractorDataJson extractorData = new ExtractorDataJson(this);
         extractorData.extraDataRecipes();
 
+
     }
 
     @Override

@@ -58,7 +58,6 @@ public class SinUpActivity extends AppCompatActivity implements WsListener{
                     startActivity(i);
                 }
             });
-
     }
 
     @Override
